@@ -1,0 +1,73 @@
+# Book Content API Contract
+
+## Overview
+This contract defines the structure and interface for the Physical AI Modules book content, ensuring consistency across all modules and adherence to the specified requirements.
+
+## Content Structure API
+
+### Module Interface
+```
+{
+  "moduleId": "string (e.g., 'ros2', 'digital-twin', 'nvidia-isaac', 'vla')",
+  "moduleName": "string",
+  "objectives": "string[]",
+  "requiredConcepts": "string[]",
+  "expectedOutcomes": "string[]",
+  "content": "string (markdown format)",
+  "summary": "string",
+  "citations": "Citation[]",
+  "applications": "string[]"
+}
+```
+
+### Citation Interface
+```
+{
+  "id": "string",
+  "title": "string",
+  "authors": "string[]",
+  "year": "number",
+  "venue": "string",
+  "doi": "string (optional)",
+  "url": "string",
+  "apaCitation": "string",
+  "relevance": "string"
+}
+```
+
+### Application Interface
+```
+{
+  "name": "string",
+  "modulesUsed": "string[]",
+  "description": "string",
+  "implementationDetails": "string",
+  "results": "string",
+  "challenges": "string[]",
+  "solutions": "string[]"
+}
+```
+
+## Validation Requirements
+
+### Content Requirements
+- Total word count: 3,000–5,000 words
+- Minimum 8 peer-reviewed sources from past 10 years
+- All claims must be source-verified
+- APA citation format mandatory
+- Docusaurus MDX compatibility
+
+### Module Requirements
+- Each module must cover specified components:
+  - Module 1: ROS 2 middleware, nodes/topics/services, rclpy, URDF
+  - Module 2: Physics simulation, sensor simulation, Unity rendering
+  - Module 3: Isaac Sim, synthetic data, VSLAM, Nav2
+  - Module 4: Voice-to-action, LLM planning, VLA reasoning
+
+### Integration Requirements
+- Capstone must demonstrate perception → planning → navigation → manipulation
+- Cross-module consistency in terminology and concepts
+- Clear integration points between modules
+
+## Response Format
+All content must be returned in Docusaurus MDX format with proper citation handling and cross-references between modules.
