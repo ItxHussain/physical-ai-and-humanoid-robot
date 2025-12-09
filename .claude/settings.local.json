@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(.specify/scripts/powershell/create-new-feature.ps1 -Json \"Success criteria:\n\nCovers all 4 Physical AI modules with accurate, evidence-supported explanations.\n\nIdentifies 3+ concrete applications of Physical AI or humanoid robotics (ROS 2 control, simulation, VSLAM, VLA).\n\nUses 8+ peer-reviewed robotics or AI sources (within the past 10 years).\n\nReader can explain how humanoid robots achieve perception → planning → navigation → manipulation.\n\nAll claims supported by academic or technical evidence.\n\nConstraints:\n\nWord count: 3,000–5,000 words.\n\nFormat: Markdown (Docusaurus MDX) with APA citations.\n\nSources: Primarily peer-reviewed robotics/AI papers relevant to ROS 2, Gazebo, Unity, Isaac, VSLAM, Nav2, or VLA.\n\nMust follow the structure required by the 4 official modules.\n\nTimeline: 2 weeks.\n\nIn-scope (must cover):\n\nModule 1: ROS 2 (Robotic Nervous System)\n\nMiddleware for robot control\n\nROS 2 nodes, topics, services\n\nBridging Python agents with rclpy\n\nURDF for humanoid modeling\n\nModule 2: Digital Twin (Gazebo & Unity)\n\nPhysics simulation: gravity, collisions\n\nSensor simulation: LiDAR, Depth, IMU\n\nUnity high-fidelity rendering and HRI scenes\n\nModule 3: NVIDIA Isaac (AI-Robot Brain)\n\nIsaac Sim photorealistic simulation\n\nSynthetic data generation\n\nIsaac ROS: VSLAM, navigation\n\nNav2 for bipedal humanoid path planning\n\nModule 4: VLA (Vision-Language-Action)\n\nWhisper voice-to-action\n\nLLM cognitive planning: language → ROS 2 actions\n\nVision → Language → Action reasoning loop\" -Number 1 -ShortName \"physical-ai-modules\" \"Physical AI Modules Book\")",
+      "Bash(.specify/scripts/powershell/setup-plan.ps1 -Json)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(npm init -y)",
+      "Bash(npm install @docusaurus/core@latest @docusaurus/preset-classic@latest @mdx-js/react@latest)",
+      "Bash(find docs/physical-ai-modules -name \"*.md\" -exec cat {})",
+      "Bash(npx docusaurus build)",
+      "Bash(npm install @docusaurus/cli@latest --save-dev)",
+      "Bash(npm install @docusaurus/module-type-aliases@latest @docusaurus/types@latest --save-dev)",
+      "Bash(npm run build)",
+      "Bash(npm start)",
+      "Bash(npx docusaurus start --help:*)",
+      "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks\")",
+      "Bash(npm run validate-metadata)",
+      "Bash(npm run)",
+      "Bash(npx kill-port 3000)",
+      "Bash(mkdir -p src/pages)",
+      "Bash(npx docusaurus start --port 3001)",
+      "Bash(npx docusaurus start --port 3002)",
+      "Bash(npx docusaurus start --port 3003)",
+      "Bash(npx kill-port 3001)",
+      "Bash(npx kill-port 3002)",
+      "Bash(npm run deploy)",
+      "Bash(git add .)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
