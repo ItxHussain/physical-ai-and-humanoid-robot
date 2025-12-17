@@ -18,6 +18,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'AI Assistant',
+      items: [
+        'chatbot-guide',
+      ],
+    },
+    {
+      type: 'category',
       label: 'References',
       items: [
         'references/citations',

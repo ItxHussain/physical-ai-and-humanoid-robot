@@ -30,6 +30,9 @@ const config = {
     locales: ['en'],
   },
 
+  clientModules: [
+    require.resolve('./src/clientModules/chatbot.js'),
+  ],
   presets: [
     [
       'classic',
@@ -75,7 +78,7 @@ const config = {
             label: 'Book',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/ItxHussain',
             label: 'GitHub',
             position: 'right',
           },
@@ -88,7 +91,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Book',
+                label: 'Physical Ai & Humanoid Robot',
                 to: '/docs/intro',
               },
             ],
@@ -111,7 +114,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/ItxHussain',
               },
             ],
           },
